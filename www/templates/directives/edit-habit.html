@@ -11,9 +11,12 @@
       <span class="input-label">Habit</span>
       <input type="text" placeholder="Type a habit here" ng-value="name">
     </label>
-    <div class="item item-icon-left">
+    <div class="item item-icon-left" ng-click="showColorOptions = !showColorOptions">
       <i class="icon ion-android-checkbox-blank" ng-style="{'color': color}"></i>
       Color
+    </div>
+    <div class="item item-text-wrap" ng-show="showColorOptions">
+      <a class="button button-icon icon ion-android-checkbox-blank" ng-style="{'color': color}" ng-repeat="color in colors" ng-click="selectColor(color)"></a>
     </div>
     <div class="item item-icon-left">
       <i class="icon" ng-class="icon"></i>
@@ -21,7 +24,8 @@
     </div>
     <div class="item">
       <button class="button button-block button-positive" ng-click="habit ? finishEditingHabit() : createHabit()">
-        <span ng-bind="habit ? 'Save' : 'Add Habit'"></span>
+        <!--<span ng-bind="habit ? 'Save' : 'Confirm'"></span>-->
+        Confirm
       </button>
     </div>
   </div>

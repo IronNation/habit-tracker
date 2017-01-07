@@ -1,7 +1,7 @@
 angular.module('starter.services')
-.factory('COLORS', [
+.constant('COLORS', [
   '#16a085',
-  '#27ae60',
+  '#2ecc71',
   '#2980b9',
   '#8e44ad',
   '#2c3e50',
