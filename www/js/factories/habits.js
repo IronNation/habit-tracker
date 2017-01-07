@@ -5,11 +5,11 @@ angular.module('starter.services')
     {
       name: 'One', 
       icon: 'ion-ribbon-a', 
-      color: '#f07300'
+      color: '#2980b9'
     },{
       name: 'Two',
       icon: 'ion-trophy',
-      color: '#ffff00'
+      color: '#27ae60'
     }
   ];
 

@@ -9,7 +9,7 @@
     <div ng-if="noHabits" class="padding">
       <h2>Why not add a new habit? <i class="icon ion-arrow-up-a"></i></h2>
     </div>
-    <ul ng-repeat="habit in habits" class="list">
+    <ul ng-repeat="habit in todayData.habits" class="list">
       <a class="item item-icon-left item-icon-right" href="#" ng-style="{'color': habit.color}">
         <i class="icon" ng-class="habit.icon"></i>
         {{habit.name}}

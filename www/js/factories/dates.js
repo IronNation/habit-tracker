@@ -48,8 +48,41 @@ angular.module('starter.services')
     return calendarData;
   }
 
+  function addDateToData(date) {
+    // TODO: should this be prepended? or sorted?
+    var newDate = {
+      date: date,
+      habits: []
+    };
+    angular.forEach(habitsList, function(habit, i) {
+      newDate.habits.push({
+        name: habit.name,
+        done: false,
+        icon: habit.icon,
+        color: habit.color
+      });
+    });
+    calendarData.push(newDate);
+    console.log(calendarData);
+    // TODO: also save it to localstorage, but without the icon & color
+
+    return newDate;
+  }
+
+  function getDataForDate(date) {
+    for(var i = 0; i < calendarData.length; i++) {
+      var dateData = calendarData[i];
+      if (dateData.date === date) {
+        return dateData;
+      }
+    }
+    // if there's no data, create it
+    return addDateToData(date);
+  }
+
   return {
-    getData: getData
+    getData: getData,
+    getDataForDate: getDataForDate
   };
 
 });
