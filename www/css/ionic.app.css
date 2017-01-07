@@ -9818,3 +9818,7 @@ a.button {
 .calendar-tab .ion-arrow-up-a:before {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg); }
+
+.calendar-tab .list {
+  padding-top: 0px;
+  margin-bottom: 0px; }
