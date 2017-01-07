@@ -1,20 +1,7 @@
-<ion-view view-title="{{tabTitle}}">
-  <ion-nav-buttons side="primary">
-    <a class="button button-icon icon ion-calendar"></a>
-  </ion-nav-buttons>
-  <ion-nav-buttons side="secondary">
-    <a class="button button-icon icon ion-plus"></a>
-  </ion-nav-buttons>
+<ion-view view-title="View">
   <ion-content class="calendar-tab">
     <div ng-if="noHabits" class="padding">
       <h2>Why not add a new habit? <i class="icon ion-arrow-up-a"></i></h2>
     </div>
-    <ul ng-repeat="habit in habits" class="list">
-      <a class="item item-icon-left item-icon-right" href="#" ng-style="{'color': habit.color}">
-        <i class="icon" ng-class="habit.icon"></i>
-        {{habit.name}}
-        <i class="icon ion-android-checkbox-outline-blank"></i>
-      </a>
-    </ul>
   </ion-content>
 </ion-view>
