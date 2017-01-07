@@ -21,6 +21,7 @@ angular.module('starter.services')
 
   function addHabit(habit) {
     // TODO: this needs to add the habit to every date in DatesFactory's calendarData, presumably
+    // or maybe not...
   }
 
   return {

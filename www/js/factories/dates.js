@@ -63,7 +63,6 @@ angular.module('starter.services')
       });
     });
     calendarData.push(newDate);
-    console.log(calendarData);
     // TODO: also save it to localstorage, but without the icon & color
 
     return newDate;
@@ -80,9 +79,18 @@ angular.module('starter.services')
     return addDateToData(date);
   }
 
+  function toggleHabit(date, habitIndex) {
+    var dateData = getDataForDate(date);
+    dateData.habits[habitIndex].done = !dateData.habits[habitIndex].done;
+
+    // TODO: also save it to localstorage, but without the icon & color
+
+  }
+
   return {
     getData: getData,
-    getDataForDate: getDataForDate
+    getDataForDate: getDataForDate,
+    toggleHabit: toggleHabit
   };
 
 });
