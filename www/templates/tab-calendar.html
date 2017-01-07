@@ -1,7 +1,16 @@
 <ion-view view-title="View">
   <ion-content class="calendar-tab">
-    <div ng-if="noHabits" class="padding">
-      <h2>Why not add a new habit? <i class="icon ion-arrow-up-a"></i></h2>
+    <div ng-repeat="date in calendarData">
+      <div class="card">
+        <div class="item item-divider">
+          {{date.date}}
+        </div>
+        <div class="item item-icon-left item-icon-right item-text-wrap" ng-repeat="habit in date.habits" ng-style="{'color': habit.color}">
+          <i class="icon" ng-class="habit.icon"></i>
+          {{habit.name}}
+          <i class="icon" ng-class="habit.done ? 'ion-android-checkbox-outline' : 'ion-android-checkbox-outline-blank'"></i>
+        </div>
+      </div>
     </div>
   </ion-content>
 </ion-view>
