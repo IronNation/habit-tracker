@@ -1,0 +1,28 @@
+<div class="card">
+  <div class="item item-icon-left item-button-right item-text-wrap" ng-style="{'color' : habit.color}" ng-show="!showHide">
+    <i class="icon" ng-class="habit.icon"></i>
+    <span>{{habit.name}}</span>
+    <button class="button button-positive" ng-click="showHide = !showHide">
+      <span ng-bind="habit ? 'Edit' : 'Create'"></span>
+    </button>
+  </div>
+  <div ng-if="showHide">
+    <label class="item item-input item-stacked-label">
+      <span class="input-label">Habit</span>
+      <input type="text" placeholder="Type a habit here" ng-value="name">
+    </label>
+    <div class="item item-icon-left">
+      <i class="icon ion-android-checkbox-blank" ng-style="{'color': color}"></i>
+      Color
+    </div>
+    <div class="item item-icon-left">
+      <i class="icon" ng-class="icon"></i>
+      Icon
+    </div>
+    <div class="item">
+      <button class="button button-block button-positive" ng-click="habit ? finishEditingHabit() : createHabit()">
+        <span ng-bind="habit ? 'Save' : 'Add Habit'"></span>
+      </button>
+    </div>
+  </div>
+</div>

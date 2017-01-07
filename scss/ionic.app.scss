@@ -23,7 +23,7 @@ $ionicons-font-path: "../lib/ionic/fonts" !default;
 
 
 // TODO: move this elsewhere
-.track-tab {
+.track-tab, .edit-habit-list-modal {
   .ion-arrow-up-a:before {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);

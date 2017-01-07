@@ -9815,10 +9815,10 @@ a.button {
   -webkit-transition-duration: 0s;
   transition-duration: 0s; }
 
-.track-tab .ion-arrow-up-a:before {
+.track-tab .ion-arrow-up-a:before, .edit-habit-list-modal .ion-arrow-up-a:before {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg); }
 
-.track-tab .list {
+.track-tab .list, .edit-habit-list-modal .list {
   padding-top: 0px;
   margin-bottom: 0px; }
