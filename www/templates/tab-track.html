@@ -1,6 +1,6 @@
 <ion-view view-title="{{tabTitle}}">
   <ion-nav-buttons side="primary">
-    <a class="button button-icon icon ion-calendar"></a>
+    <a class="button button-icon icon ion-calendar" ng-click="openDatePicker()"></a>
   </ion-nav-buttons>
   <ion-nav-buttons side="secondary">
     <a class="button button-icon icon ion-plus" ng-click="addHabit()"></a>
@@ -9,7 +9,7 @@
     <div ng-if="noHabits" class="padding">
       <h2>Why not add a new habit? <i class="icon ion-arrow-up-a"></i></h2>
     </div>
-    <ul ng-repeat="habit in todayData.habits" class="list">
+    <ul ng-repeat="habit in selectedDayData.habits" class="list">
       <div class="item item-icon-left item-icon-right" ng-click="toggleHabit($index)" ng-style="{'color': habit.color}">
         <i class="icon" ng-class="habit.icon"></i>
         {{habit.name}}

@@ -3,7 +3,7 @@
     <div ng-repeat="date in calendarData">
       <div class="card">
         <div class="item item-divider">
-          {{date.date}}
+          {{date.date | date : mediumDate}}
         </div>
         <div class="item item-icon-left item-icon-right item-text-wrap" ng-repeat="habit in date.habits" ng-style="{'color' : habit.done ? habit.color : 'grey', 'opacity' : habit.done ? 1 : 0.3}">
           <!-- if the background stays white, just use a lighter grey instead of opacity -->
