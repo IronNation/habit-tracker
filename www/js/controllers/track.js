@@ -31,9 +31,8 @@ angular.module('starter.controllers')
   });
 
   $scope.$on('modal.hidden', function() {
-    // $scope.habits = HabitsFactory.getHabits();
     $scope.todayData = DatesFactory.getDataForDate(today);
-    console.log($scope.habits);
+    $scope.noHabits = $scope.habits.length > 0 ? false : true;
   });
   
 });

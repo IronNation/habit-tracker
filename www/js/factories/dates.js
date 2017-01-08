@@ -4,29 +4,29 @@ angular.module('starter.services')
   var habitsList = HabitsFactory.getHabits();
 
   var calendarData = [
-    {
-      date: '2017-05-03', 
-      habits: [
-        {
-          name: 'One',
-          done: true
-        },{
-          name: 'Two',
-          done: true
-        }
-      ]
-    },{
-      date: '2017-05-04', 
-      habits: [
-        {
-          name: 'One',
-          done: true
-        },{
-          name: 'Two',
-          done: false
-        }
-      ]
-    }
+    // {
+    //   date: '2017-05-03', 
+    //   habits: [
+    //     {
+    //       name: 'One',
+    //       done: true
+    //     },{
+    //       name: 'Two',
+    //       done: true
+    //     }
+    //   ]
+    // },{
+    //   date: '2017-05-04', 
+    //   habits: [
+    //     {
+    //       name: 'One',
+    //       done: true
+    //     },{
+    //       name: 'Two',
+    //       done: false
+    //     }
+    //   ]
+    // }
   ];
 
   function getData() {

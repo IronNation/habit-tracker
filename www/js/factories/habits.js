@@ -2,15 +2,15 @@ angular.module('starter.services')
 .factory('HabitsFactory', function ($injector, $filter) {
 
   var habits = [
-    {
-      name: 'One', 
-      icon: 'ion-ribbon-a', 
-      color: '#2980b9'
-    },{
-      name: 'Two',
-      icon: 'ion-trophy',
-      color: '#27ae60'
-    }
+    // {
+    //   name: 'One', 
+    //   icon: 'ion-ribbon-a', 
+    //   color: '#2980b9'
+    // },{
+    //   name: 'Two',
+    //   icon: 'ion-trophy',
+    //   color: '#27ae60'
+    // }
   ];
 
   function getHabits() {
