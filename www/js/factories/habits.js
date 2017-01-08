@@ -1,5 +1,5 @@
 angular.module('starter.services')
-.factory('HabitsFactory', function () {
+.factory('HabitsFactory', function ($injector, $filter) {
 
   var habits = [
     {
@@ -19,13 +19,23 @@ angular.module('starter.services')
     return habits;
   }
 
-  function addHabit(habit) {
+  function addHabit(name, icon, color) {
     // TODO: this needs to add the habit to every date in DatesFactory's calendarData, presumably
     // or maybe not...
+    var habit = {
+      name: name,
+      icon: icon,
+      color: color
+    };
+    habits.push(habit);
+    console.log(habits);
+    // the habit also needs to be added to today's list
+    $injector.get('DatesFactory').addHabitToDate(habit, $filter('date')(new Date(), 'yyyy-MM-dd'))
   }
 
   return {
-    getHabits: getHabits
+    getHabits: getHabits,
+    addHabit: addHabit
   };
 
 });

@@ -19,15 +19,21 @@ angular.module('starter.controllers')
 
 
   // MODAL
-  $scope.editList = function() {
+  $scope.addHabit = function() {
     $scope.modal.show();
   };
 
-  $ionicModal.fromTemplateUrl('templates/modals/edit-habit-list.html', {
+  $ionicModal.fromTemplateUrl('templates/modals/add-habit.html', {
     scope: $scope,
     animation: 'slide-in-up'
   }).then(function(modal) {
     $scope.modal = modal;
+  });
+
+  $scope.$on('modal.hidden', function() {
+    // $scope.habits = HabitsFactory.getHabits();
+    $scope.todayData = DatesFactory.getDataForDate(today);
+    console.log($scope.habits);
   });
   
 });

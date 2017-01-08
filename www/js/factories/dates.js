@@ -87,10 +87,26 @@ angular.module('starter.services')
 
   }
 
+  function addHabitToDate(habit, date) {
+    // TODO: see if date exists; if not create it
+    var dateData = getDataForDate(date);
+    // TODO: if date, check that habit does not exist on date. if it doesn't, add the habit
+    for (i = 0; i < dateData.habits; i++) {
+      var loopHabit = dateData.habits[i];
+      if (loopHabit.name === habit.name) {
+        break;
+        // TODO: this breaks silently; the user doesn't know they've duplicated a habit
+      }
+    }
+    dateData.habits.push(habit);
+    // TODO: save to localstorage
+  }
+
   return {
     getData: getData,
     getDataForDate: getDataForDate,
-    toggleHabit: toggleHabit
+    toggleHabit: toggleHabit,
+    addHabitToDate: addHabitToDate
   };
 
 });

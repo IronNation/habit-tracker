@@ -1,0 +1,25 @@
+angular.module('starter.services')
+.constant('ICONS', [
+  'ion-home',
+  'ion-heart',
+  'ion-trash-a',
+  'ion-clipboard',
+  'ion-email',
+  'ion-compose',
+  'ion-briefcase',
+  'ion-map',
+  'ion-chatbubbles',
+  'ion-fork',
+  'ion-wineglass',
+  'ion-coffee',
+  'ion-battery-half',
+  'ion-camera',
+  'ion-paintbrush',
+  'ion-cash',
+  'ion-bowtie',
+  'ion-ribbon-a',
+  'ion-ribbon-b',
+  'ion-university',
+  'ion-earth',
+  'ion-no-smoking'
+]);
