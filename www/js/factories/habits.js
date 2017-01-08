@@ -20,17 +20,16 @@ angular.module('starter.services')
   }
 
   function addHabit(name, icon, color) {
-    // TODO: this needs to add the habit to every date in DatesFactory's calendarData, presumably
-    // or maybe not...
     var habit = {
       name: name,
       icon: icon,
       color: color
     };
     habits.push(habit);
-    console.log(habits);
+    // TODO: this needs to add the habit to every date in DatesFactory's calendarData
+
     // the habit also needs to be added to today's list
-    $injector.get('DatesFactory').addHabitToDate(habit, $filter('date')(new Date(), 'yyyy-MM-dd'))
+    $injector.get('DatesFactory').addHabitToDates(habit);
   }
 
   return {
